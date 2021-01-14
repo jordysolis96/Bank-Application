@@ -12,6 +12,11 @@ public class Bank {
         System.out.println(5 + "." + " " + "Quit");
         System.out.println("Select an option by entering the corresponding number.");
         int Choice = choice.nextInt();
+        if(Choice == 5){
+            System.out.println("Ending session...");
+            System.out.println("Goodbye");
+                System.exit(0);
+            }
         return bankMenu();
     }
 
