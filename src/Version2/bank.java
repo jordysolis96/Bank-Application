@@ -18,6 +18,11 @@ public class bank {
         int Choice = choice.nextInt();
         if (Choice == 1) {
             System.out.println("Your current balance is: $" + balance);
+        }else if(Choice == 2){
+            System.out.println("How much would you like to withdraw?");
+            int withdraw = choice.nextInt();
+            System.out.println("You took out: " + withdraw);
+            System.out.println("Your current balance now is: " + (balance - withdraw));
         }else if(Choice == 5){
             System.exit(0);
         }
