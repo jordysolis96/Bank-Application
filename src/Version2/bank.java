@@ -1,5 +1,6 @@
 package Version2;
 
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,8 +13,7 @@ public class bank {
         System.out.println(1 + "." + " " + "Check balance");
         System.out.println(2 + "." + " " + "Withdraw");
         System.out.println(3 + "." + " " + "Deposit");
-        System.out.println(4 + "." + " " + "Transfer");
-        System.out.println(5 + "." + " " + "Quit");
+        System.out.println(4 + "." + " " + "Quit");
         System.out.println("Select an option by entering the corresponding number.");
         int Choice = choice.nextInt();
         if (Choice == 1) {
@@ -23,7 +23,12 @@ public class bank {
             int withdraw = choice.nextInt();
             System.out.println("You took out: $" + withdraw);
             System.out.println("Your current balance now is: $" + (balance - withdraw));
-        }else if(Choice == 5){
+        }else if(Choice == 3){
+            System.out.println("How much would you like to deposit?");
+            int deposit = choice.nextInt();
+            System.out.println("You've deposited: $" + deposit);
+            System.out.println("Your current balance is: $" + (balance + deposit));
+        }else if(Choice == 4){
             System.exit(0);
         }
         return bankMenu();
